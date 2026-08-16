@@ -1,0 +1,226 @@
+.pokemon-search-profile {
+    width: 900px;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .pokemon-container {
+        width: 80%;
+        height: 70vh;
+        border: 1px solid black;
+        box-shadow: 2px 2px 5px black;
+        position: relative;
+        top: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 5%;
+        background-color: rgb(69, 68, 68);
+        border-radius: 5px;
+
+
+        .pokemon-profile {
+            width: 95%;
+            height: 95%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .pokemon-img {
+                height: 100%;
+                width: 50%;
+                position: relative;
+                display: flex;
+                justify-content: start;
+                align-items: end;
+
+                /*img {
+                width: 100%;
+                z-index: -1;
+                position: relative;
+                object-fit: contain;
+                 Fades the image out towards all edges
+                mask-image: linear-gradient(to right, black 50%, transparent 100%);
+                Support for older Chrome/Safari browsers */
+
+                .pokeImg.active {
+                    width: 95%;
+                    object-fit: contain;
+                    position: absolute;
+                    border: 1px solid transparent;
+                    bottom: 0;
+                    z-index: 10;
+                    padding: 5px;
+                    margin: 0 0 10px 0;
+                    transition: all 1s ease;
+
+                 
+
+                }
+
+                .pokeImg {
+                    width: 20%;
+                    position: absolute;
+                    object-fit: contain;
+                    border: 2px solid black;
+                    background-color: transparent;
+                    border-radius: 5px;
+                    bottom: 0;
+                    z-index: 11;
+                    padding: 5px;
+                    transition: all 1s ease;
+
+
+                }
+
+                .pokemonPlatform {
+                    position: absolute;
+                    top: 40%;
+                    /* Adjust based on your image size */
+                    width: 90%;
+                    height: 90%;
+                    background-color: rgba(0, 0, 0, 0.2);
+                    /* Semi-transparent shadow color */
+                    border-radius: 50%;
+                    /* Makes it a circle */
+
+                    /* This makes it look like a 3D platform */
+                    transform: rotateX(75deg);
+
+                    /* Optional: Add a glow or border to make it look like a "base" */
+                    border: 4px solid rgba(255, 255, 255, 0.3);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+                    z-index: 1;
+                    margin: 0;
+                }
+            }
+
+
+        }
+
+        .pokemon-descrip {
+            height: 100%;
+            width: 50%;
+            margin: 0 0 0 0;
+            background-color: rgb(19, 19, 19);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+            box-shadow: 2px 5px 5px black;
+
+            .pokemon-name {
+                font-size: 2em;
+                width: 90%;
+                height: 10%;
+                background-color: transparent;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+
+                p {
+                    margin: 0 0 0 10px;
+                }
+            }
+
+            .pokemon-type {
+                font-size: 1em;
+                width: 90%;
+                height: 10%;
+                background-color: transparent;
+
+                p {
+                    margin: 0 0 0 10px;
+                    font-size: 0.7em;
+                    color: white;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bold;
+                }
+            }
+
+            .pokemon-units {
+                font-size: 0.8em;
+                width: 90%;
+                height: 10%;
+                background-color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                flex-direction: column;
+
+                p {
+                    margin: 0;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 0.8em;
+                    font-family: sans-serif;
+                    margin-left: 10px;
+                }
+            }
+
+            .pokemon-skill-stat {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60%;
+                width: 90%;
+                gap: 2%;
+
+                border: 2px solid white;
+                border-radius: 5px;
+
+                .pokemon-skill {
+                    width: 38%;
+                    height: 95%;
+                    padding: 5px;
+                    color: white;
+                    background-color: transparent;
+                    z-index: 10;
+                    display: flex;
+                    justify-content: start;
+                    align-items: start;
+                    flex-direction: column;
+
+                    .moves-list {
+                        font-family: sans-serif;
+                        margin: 0;
+                        font-size: 0.8em;
+                    }
+
+                    h1 {
+                        font-size: 1.2em;
+                        font-family: sans-serif;
+                        margin: 0 0 20px 0;
+                    }
+                }
+
+                .pokemon-stat {
+                    width: 58%;
+                    height: 95%;
+                    padding: 5px;
+                    color: white;
+                    background-color: transparent;
+
+                    h1 {
+                        font-family: sans-serif;
+                        font-size: 1.2em;
+                        margin: 0;
+                    }
+
+                    .hexagonGraphHolder {
+                        z-index: 100;
+                        width: 100%;
+                    }
+
+
+                }
+            }
+        }
+    }
+
+
+
+}

@@ -1,0 +1,88 @@
+:root {
+  --pokeball-size: 260px; /* Change this one value to resize everything */
+  --black-border: #333;
+  --pokered: #f00000;
+  --pokewhite: #f0f0f0;
+}
+
+.pokeball-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.pokeball {
+  width: var(--pokeball-size);
+  height: var(--pokeball-size);
+  background-color: var(--pokewhite);
+  border: 8px solid var(--black-border);
+  border-radius: 50%;
+  position: relative;
+  animation: bounce 1.5s infinite;
+  transform-origin: bottom;
+  overflow: hidden; /* Keeps the red half inside the circle */
+  box-shadow: inset -10px 10px 0 10px rgba(0, 0, 0, 0.1); /* Subtle 3D effect */
+}
+
+/* Red Top */
+.pokeball-top {
+  width: 100%;
+  height: 50%;
+  background-color: var(--pokered);
+  border-bottom: 8px solid var(--black-border);
+}
+
+/* Black Center Line & Buttons */
+.pokeball-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.pokeball-button {
+  width: 50px;
+  height: 50px;
+  background-color: var(--black-border);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokeball-inner-button {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 4px solid var(--black-border);
+  border-radius: 50%;
+  /* Optional: Pulsing animation */
+  animation: pulse 1.5s infinite;
+}
+
+/* Simple Pulsing Animation */
+@keyframes pulse {
+  0% { background-color: white; transform: scale(1); }
+  50% { background-color: #ddd; transform: scale(1.1); }
+  100% { background-color: white; transform: scale(1);}
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translateY(-50px) scale(1.05); /* Peak of the jump */
+    animation-timing-function: ease-in;
+  }
+  95% {
+    transform: translateY(0) scale(1); /* Just before hitting the ground */
+  }
+  98% {
+    transform: translateY(0) scale(1.2, 0.8); /* Squash! Wider and shorter */
+  }
+}

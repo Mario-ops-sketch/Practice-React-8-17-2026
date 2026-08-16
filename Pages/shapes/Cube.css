@@ -1,0 +1,224 @@
+.shapeContainer {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 60%;
+    height: 50vh;
+    gap: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    .imgDescrip {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 50%;
+        margin: 0;
+
+        .imgHolderCube {
+            position: absolute;
+            transition: all 0.5s ease;
+            z-index: 10;
+            height: 180px;
+            width: 200px;
+
+            .line {
+                position: absolute;
+                height: 2px;
+                background-color: black;
+                border-radius: 2px;
+                box-shadow: 0px 1px 2px black;
+                margin: 0px;
+            }
+
+            .square-top {
+                top: 17%;
+                left: 0;
+                width: 75%;
+            }
+
+            .square-left {
+                top: 17%;
+                left: 0;
+                width: 75%;
+                transform-origin: left;
+                transform: rotate(90deg);
+            }
+
+            .square-right {
+                top: 17%;
+                right: 25%;
+                width: 75%;
+                transform-origin: right;
+                transform: rotate(-90deg);
+            }
+
+            .square-bottom {
+                top: 100%;
+                left: 0;
+                width: 75%;
+            }
+
+            .top-square {
+                top: 0;
+                left: 25%;
+                width: 75%;
+            }
+
+            .left-slant-square {
+                top: 0;
+                left: 25.5%;
+                width: 30%;
+                transform-origin: left;
+                transform: rotate(148deg);
+            }
+
+            .right-slant-square {
+                top: 0;
+                left: 100%;
+                width: 30%;
+                transform-origin: left;
+                transform: rotate(148deg);
+            }
+
+            .right-square {
+                top: 0;
+                width: 75%;
+                right: 0;
+                transform-origin: right;
+                transform: rotate(-90deg);
+            }
+
+            .bottom-slant-square {
+                top: 82%;
+                left: 101%;
+                width: 30%;
+                transform-origin: left;
+                transform: rotate(148deg);
+            }
+
+            .left-bottom-slant-square{
+                width: 30%;
+                left: 25%;
+                top: 83%;
+                transform-origin: left;
+                transform: rotate(148deg);
+            }
+
+            .left-square{
+                top: 0;
+                left: 25%;
+                width: 75%;
+                transform-origin: left;
+                transform: rotate(90deg);
+            }
+
+            .bottom-square{
+                top: 82%;
+                left: 25%;
+                width: 75%;
+            }
+
+            .descripHolder {
+                position: absolute;
+                transition: all 0.5s ease;
+                z-index: 9;
+                height: 200px;
+                width: 300px;
+                padding: 20px;
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+                transform: rotateY('180deg');
+                gap: 30px;
+                opacity: 0;
+
+                h1 {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                span {
+                    font-style: italic;
+                    font-weight: bold;
+                }
+            }
+        }
+
+    }
+
+
+    .calculationFormula {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 50%;
+        margin: 0;
+        text-align: center;
+
+        .calculationHolder {
+            font-size: 40px;
+            margin: 0;
+            padding: 0;
+            transition: all 1s ease;
+
+            .showAreaCube {
+                margin: 0;
+                padding: 0;
+                transition: all 0.5s ease;
+                height: 40px;
+                width: 200px;
+                font-size: 30px;
+            }
+
+            .errorAlert {
+                color: red;
+                font-size: 10px;
+                opacity: 1;
+                transition: all 0.5s ease;
+            }
+        }
+
+        .formulaHolder {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin: 0;
+            font-weight: bold;
+
+            .inputSide {
+                color: grey;
+                background-color: black;
+                padding: 10px 15px;
+                border: 0;
+                border-radius: 5px;
+            }
+
+            label {
+                color: black;
+                font-size: 20px;
+            }
+
+            button {
+                background-color: black;
+                color: green;
+                padding: 10px 15px;
+                border: 0;
+                border-radius: 5px;
+            }
+        }
+    }
+}

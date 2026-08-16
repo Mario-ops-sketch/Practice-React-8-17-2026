@@ -1,0 +1,146 @@
+.weather-list-container {
+    height: 80vh;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+
+    .weather-list-holder {
+        height: 90%;
+        width: 19%;
+        box-shadow: 2px 5px 5px black;
+        border-radius: 20px;
+        background: rgb(204, 204, 204);
+        transition: all 0.5s ease-in-out;
+        transform: scale(1);
+        /* 2. The crucial BLUR effect on the background *behind* the card */
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;        
+
+        .weather-name {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            height: 20%;
+            width: 100%;
+
+            .nameW {
+                margin: 0 0 0 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 500;
+                font-size: 1.5em;
+            }
+
+            .countryW {
+                margin: 0 0 0 13px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 500;
+                font-size: 0.6em;
+            }
+        }
+
+        .weather-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40%;
+            width: 100%;
+
+            .iconW {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                animation: wiggle 3s ease-in-out infinite;
+                filter: drop-shadow(2px 10px 15px rgba(0, 0, 0, 0.3));
+            }
+
+            .iconW::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                width: 60%;
+                height: 10px;
+                background: rgba(0, 0, 0, 0.2);
+                border-radius: 50%;
+                /* Creates an oval shape */
+                filter: blur(8px);
+                /* Softens the shadow */
+            }
+        }
+
+        .weather-main {
+            height: 10%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            text-shadow: 2px 5px 5px black;
+        }
+
+        .weather-temp-humid-speed-deg {
+            height: 25%;
+            width: 95%;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(252, 252, 252, 0.075);
+            border: 1.5px solid rgb(59, 59, 59);
+
+            /* 2. The crucial BLUR effect on the background *behind* the card */
+            backdrop-filter: blur(25px);
+
+            .weather-thsd {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 90%;
+                width: 25%;
+                border-right: 1px solid black;
+                
+
+                .weatherW {
+                    margin: 0;
+                    font-size: 0.6em;
+                    font-weight: 600;
+                }
+
+                .labelW {
+                    font-size: 0.5em;
+                }
+            }
+        }
+    }
+
+    .weather-list-holder:hover {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes wiggle {
+
+    0%,
+    50%,
+    100% {
+        transform: translate(0px, 0px);
+    }
+
+    30% {
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        transform: translate(-2px, -2px);
+    }
+}

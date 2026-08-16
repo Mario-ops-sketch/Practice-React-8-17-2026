@@ -1,0 +1,641 @@
+.weather-container {
+    width: 1250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .weather-holder {
+        width: 95%;
+        height: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5%;
+
+        .weather-description {
+            width: 55%;
+            height: 100%;
+            box-shadow: 2px 5px 5px black;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(187, 187, 187);
+
+            .weather-location-date {
+                width: 95%;
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                box-shadow: 2px 2px 5px black;
+                background-color: white;
+
+                .weather-location {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: start;
+                    flex-direction: column;
+
+                    h1 {
+                        margin: 0 0 0 10px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 1.8em;
+                        font-weight: 600;
+                    }
+
+                    p {
+                        margin: 0 0 0 15px;
+                        font-size: 0.7em;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: 500;
+
+                    }
+                }
+
+                .weather-date {
+                    width: 50%;
+                    height: 100%;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: end;
+                    flex-direction: column;
+
+                    h1 {
+                        font-size: 1.2em;
+                        margin: 0 10px 0 0;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+
+                    p {
+                        margin: 0 10px 0 0;
+                        font-size: 0.7em;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                }
+            }
+
+            .weather-icon-descrip {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .weather-icon {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    animation: floating 3s ease infinite;
+                    will-change: transform;
+
+                    img {
+                        height: 80%;
+                        width: 70%;
+                        margin: 0;
+                        filter: drop-shadow(2px 10px 15px rgba(0, 0, 0, 0.3));
+                    }
+
+                    img::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -10px;
+                        width: 60%;
+                        height: 10px;
+                        background: rgba(0, 0, 0, 0.2);
+                        border-radius: 50%;
+                        /* Creates an oval shape */
+                        filter: blur(8px);
+                        /* Softens the shadow */
+                    }
+
+                }
+
+
+
+                .weather-descrip-temp {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    .weather-temp {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 2.5em;
+                        font-weight: 700;
+                        margin: 0;
+                    }
+
+                    .weather-descrip {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 0.8em;
+                        font-weight: 500;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .weather-main-humid-pressure {
+                height: 20%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2%;
+
+                .weather-main {
+                    height: 100%;
+                    width: 30%;
+                    border-radius: 20px;
+                    box-shadow: 2px 2px 5px black;
+                    display: flex;
+                    background-color: rgb(244, 243, 243);
+                    align-items: start;
+                    justify-content: start;
+                    flex-direction: column;
+
+                    h1 {
+                        margin: 0 0 0 10px;
+                        width: 90%;
+                        height: 40%;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: 200;
+                        font-size: 1em;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                    }
+
+                    p {
+                        margin: 0 0 0 10px;
+                        width: 90%;
+                        height: 60%;
+                        font-size: 1.5em;
+                        display: flex;
+                        justify-content: center;
+                        align-items: start;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: 700;
+                        text-shadow: 2px 2px 5px rgb(116, 116, 116);
+                    }
+                }
+
+                .weather-humid {
+                    height: 100%;
+                    width: 30%;
+                    background-color: rgb(244, 243, 243);
+                    border-radius: 20px;
+                    box-shadow: 2px 2px 5px black;
+                    display: flex;
+                    align-items: start;
+                    justify-content: start;
+                    flex-direction: column;
+
+                    h1 {
+                        margin: 0 0 0 10px;
+                        width: 90%;
+                        height: 40%;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: 200;
+                        font-size: 1em;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                    }
+
+                    p {
+                        margin: 0 0 0 10px;
+                        width: 90%;
+                        height: 60%;
+                        font-size: 1.5em;
+                        display: flex;
+                        justify-content: center;
+                        align-items: start;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: 700;
+                        text-shadow: 2px 2px 5px rgb(116, 116, 116);
+                    }
+                }
+
+                .weather-pressure {
+                    height: 100%;
+                    width: 30%;
+                    background-color: rgb(244, 243, 243);
+                    border-radius: 20px;
+                    box-shadow: 2px 2px 5px black;
+                    display: flex;
+                    align-items: start;
+                    justify-content: start;
+                    flex-direction: column;
+
+                    h1 {
+                        margin: 0 0 0 10px;
+                        width: 90%;
+                        height: 40%;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: 200;
+                        font-size: 1em;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                    }
+
+                    p {
+                        margin: 0 0 0 10px;
+                        width: 90%;
+                        height: 60%;
+                        font-size: 1.5em;
+                        display: flex;
+                        justify-content: center;
+                        align-items: start;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: 700;
+                        text-shadow: 2px 2px 5px rgb(116, 116, 116);
+                    }
+                }
+            }
+        }
+
+        .weather-details {
+            width: 25%;
+            height: 100%;
+            box-shadow: 2px 5px 5px black;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 10px;
+
+            .details {
+                width: 90%;
+                height: 80%;
+
+                h1 {
+                    font-size: 1.2em;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: white;
+                }
+
+                .detail-container {
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom: 1px solid white;
+
+                    p {
+                        width: 50%;
+                        margin: 5%;
+                        font-size: 0.8em;
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        i {
+                            margin: 0 10px 0 0;
+                        }
+                    }
+
+
+                }
+            }
+
+            .notice {
+                width: 90%;
+                height: 10%;
+                display: flex;
+                justify-content: center;
+                align-items: end;
+
+                .notice-detail {
+                    color: white;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 0.6em;
+                    padding: 5px;
+                    backdrop-filter: blur(10px);
+                    background-color: rgba(255, 255, 255, 0.2);
+                    border-radius: 5px;
+                    font-style: italic;
+                }
+
+                span {
+                    color: black;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .weather-search {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            gap: 2%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px black;
+
+
+            .search-logo {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 1.5em;
+                height: 10%;
+                width: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                p {
+                    margin: 0 0 0 20px;
+                    font-weight: 700;
+                }
+            }
+
+            .search-city-country {
+                height: 20%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 2%;
+
+                .no-city-input {
+                    color: red;
+                    font-size: 0.5em;
+                    width: 80%;
+                    opacity: 0;
+                    transition: all 0.5s ease;
+                }
+
+                .no-country-input {
+                    color: red;
+                    font-size: 0.5em;
+                    width: 80%;
+                    opacity: 0;
+                    transition: all 0.5s ease;
+                }
+
+                .search-box {
+                    width: 90%;
+                    height: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 20px;
+                    box-shadow: 2px 2px 5px black;
+
+                    .weather-input {
+                        border: none;
+                        padding: 10px 15px;
+                        outline: none;
+                        width: 60%;
+                        height: 10%;
+                        font-size: 0.7em;
+                    }
+
+                    label {
+                        height: 50%;
+                        width: 8%;
+                        font-size: 0.6em;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: none;
+                        cursor: pointer;
+                    }
+
+                    button {
+                        border-radius: 50%;
+                        border: none;
+                        background-color: black;
+                        color: white;
+                        height: 15px;
+                        width: 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 8px;
+                        cursor: pointer;
+                        font-weight: 600;
+                    }
+                }
+
+                .get-weather {
+                    height: 30%;
+                    width: 90%;
+                    background-color: white;
+                    border: none;
+                    border-radius: 20px;
+                    box-shadow: 2px 2px 5px black;
+                    font-size: 0.7em;
+                    transition: all 0.5s ease;
+                    cursor: pointer;
+                    font-weight: 600;
+                }
+
+                .get-weather:hover {
+                    background-color: black;
+                    color: white;
+                }
+            }
+
+            .country-abb {
+                height: 63%;
+                width: 90%;
+                background-color: white;
+                box-shadow: 2px 5px 5px black;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .country-abb-list {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    flex-direction: column;
+
+                    h1 {
+                        height: 10%;
+                        width: 90%;
+                        font-size: 0.9em;
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        color: black;
+                    }
+
+                    .country-list {
+                        height: 80%;
+                        width: 95%;
+                        overflow: hidden scroll;
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                        flex-direction: column;
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+
+                        .abb {
+                            height: 10%;
+                            display: flex;
+                            width: 90%;
+                            justify-content: start;
+                            align-items: center;
+                            border-bottom: 1px solid black;
+                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                            font-weight: 300;
+                            color: black;
+
+                            .country-name {
+                                width: 70%;
+                                font-size: 0.8em;
+                                height: 100%;
+                                display: flex;
+                                justify-content: start;
+                                align-items: center;
+                            }
+
+                            .country-code {
+                                width: 30%;
+                                height: 100%;
+                                font-size: 0.8em;
+                                display: flex;
+                                justify-content: end;
+                                align-items: center;
+
+                                p {
+                                    background-color: rgb(77, 77, 77);
+                                    padding: 1px;
+                                    border-radius: 2px;
+                                    color: white;
+                                    font-weight: 400;
+                                    margin: 0 8px 0 0;
+                                    box-shadow: 2px 2px 5px black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            /* Dims the background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            z-index: 1000;
+            /* Ensures it is on top of everything */
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            animation: popIn 0.3s ease;
+            /* Adds a nice smooth entrance */
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+            i {
+                animation: zigZag 0.5s ease-in-out infinite;
+            }
+
+            button {
+                padding: 10px 15px;
+                border: none;
+                background-color: grey;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 0.5s ease;
+            }
+
+            button:hover {
+                padding: 10px 15px;
+                border: none;
+                background-color: rgb(3, 3, 3);
+                border-radius: 10px;
+                cursor: pointer;
+                color: white;
+            }
+        }
+
+
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0px);
+    }
+
+    50% {
+        transform: translate(-15px);
+        /* Move UP by 15 pixels */
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zigZag {
+
+    0%,
+    50%,
+    100% {
+        transform: translateX(0px);
+    }
+
+    30% {
+        transform: translateX(1px);
+    }
+
+    80% {
+        transform: translateX(-1px);
+    }
+
+}

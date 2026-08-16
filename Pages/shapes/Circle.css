@@ -1,0 +1,143 @@
+.shapeContainer {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 65%;
+    height: 50vh;
+    gap: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    .imgDescrip {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 50%;
+        margin: 0;
+
+        .imgHolderSquare {
+            position: absolute;
+            transition: all 0.5s ease;
+            z-index: 10;
+            height: 150px;
+            width: 150px;
+            padding: 20px;
+            border: 2px solid black;
+            box-shadow: 2px 5px 5px black;
+        
+        }
+
+        .imgHolderCircle {
+            position: absolute;
+            transition: all 0.5s ease;
+            z-index: 10;
+            height: 150px;
+            width: 150px;
+            padding: 20px;
+            border: 2px solid black;
+            box-shadow: 2px 5px 5px black;
+            border-radius: 50%;
+        }
+
+        .descripHolder {
+            position: absolute;
+            transition: all 0.5s ease;
+            z-index: 9;
+            height: 200px;
+            width: 300px;
+            padding: 20px;
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            justify-content: center;
+            transform: rotateY('180deg');
+            gap: 30px;
+            opacity: 0;
+
+            h1 {
+                margin: 0;
+                padding: 0;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+            span{
+                font-style: italic;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .calculationFormula {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 50%;
+        margin: 0;
+        text-align: center;
+
+        .calculationHolder {
+            font-size: 40px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            transition: all 1s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-self: center;
+            
+            .showAreaCircle {
+                margin: 0;
+                padding: 0;
+                transition: all 0.5s ease;
+                height: 40px;
+                width: 200px;
+                font-size: 30px;
+            }
+            .errorAlert {
+                color: red;
+                font-size: 10px;
+                opacity: 1;
+                transition: all 0.5s ease;
+                margin: 20% 0 0 0;
+            }
+        }
+
+        .formulaHolder {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin: 0;
+            font-weight: bold;
+
+            .radiusSide {
+                color: grey;
+                background-color: black;
+                padding: 10px 15px;
+                border: 0;
+                border-radius: 5px;
+            }
+            label {
+                color: black;
+                font-size: 20px;
+            }
+            button{
+                background-color: black;
+                color: green;
+                padding: 10px 15px;
+                border: 0;  
+                border-radius: 5px;
+            }
+        }
+    }
+}

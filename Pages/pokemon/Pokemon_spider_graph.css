@@ -1,0 +1,19 @@
+  .stats-hexagon-container {
+    height: 70%;
+    width: 100%;
+
+    svg {
+      width: 100%;
+
+      .stat-label {
+        font-family: sans-serif;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        fill: #aaa;
+        font-weight: bold;
+      }
+      .stat-label:hover{
+        fill: white;
+      }
+    }
+  }

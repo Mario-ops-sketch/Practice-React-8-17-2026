@@ -1,0 +1,194 @@
+.shapeContainer {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 60%;
+    height: 50vh;
+    gap: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    .imgDescrip {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 50%;
+        margin: 0;
+
+
+
+        .imgHolderTrapezoid {
+            position: absolute;
+            transition: all 0.5s ease;
+            z-index: 10;
+            width: 200px;
+            height: 173px;
+
+            .line {
+                position: absolute;
+                background-color: black;
+                height: 2px;
+                /* The thickness of your triangle outline */
+                border-radius: 2px;
+                /* This is the key: it adds shadow only to the black line */
+                box-shadow: 0px 5px 5px black;
+            }
+
+            .top-base {
+                top: 40px;
+                left: 0;
+                right: 0;
+                margin-right: auto;
+                margin-left: auto;
+                width: 61%;
+            }
+
+            .left-slant {
+                bottom: 40px;
+                left: 0;
+                width: 50%;
+                /* Same length as base for equilateral */
+                transform-origin: left;
+                /* Rotate from the bottom-left corner */
+                transform: rotate(-67deg);
+            }
+
+            .right-slant {
+                bottom: 40px;
+                right: 0;
+                width: 50%;
+                transform-origin: right;
+                /* Rotate from the bottom-right corner */
+                transform: rotate(67deg);
+            }
+
+            .bottom-base {
+                left: 0;
+                bottom: 40px;
+                width: 100%;
+            }
+        }
+
+        .descripHolder {
+            position: absolute;
+            transition: all 0.5s ease;
+            z-index: 9;
+            height: 200px;
+            width: 300px;
+            padding: 20px;
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            justify-content: center;
+            transform: rotateY('180deg');
+            gap: 30px;
+            opacity: 0;
+
+            h1 {
+                margin: 0;
+                padding: 0;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+            span{
+                font-style: italic;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .calculationFormula {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 50%;
+        margin: 0;
+        text-align: center;
+
+        .calculationHolder {
+            font-size: 30px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            transition: all 1s ease;
+
+            .showAreaTrap {
+                margin: 0;
+                padding: 0;
+                transition: all 0.5s ease;
+                height: 50px;
+                font-size: 25px;
+                width: 100%;
+            }
+
+            .errorAlert {
+                color: red;
+                font-size: 10px;
+                margin: 0;
+                opacity: 1;
+                height: 20px;
+                transition: all 0.5s ease;
+            }
+        }
+
+        .formulaHolder {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin: 0;
+            font-weight: bold;
+
+            .aBase {
+                color: grey;
+                background-color: black;
+                padding: 10px 15px;
+                border: 0;
+                width: 30px;
+                border-radius: 5px;
+            }
+
+            .bBase {
+                color: grey;
+                background-color: black;
+                padding: 10px 15px;
+                border: 0;
+                width: 30px;
+                border-radius: 5px;
+            }
+
+
+            .heightSideTrapezoid {
+                color: grey;
+                background-color: black;
+                padding: 10px 15px;
+                border: 0;
+                border-radius: 5px;
+                width: 30px;
+            }
+
+            label {
+                color: black;
+                font-size: 20px;
+            }
+
+            button {
+                background-color: black;
+                color: green;
+                padding: 10px 15px;
+                border: 0;
+                border-radius: 5px;
+            }
+        }
+    }
+}
